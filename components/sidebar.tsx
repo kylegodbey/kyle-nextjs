@@ -24,18 +24,23 @@ const navItems = {
     y: 69,
     w: '56px',
   },
-  '/guestbook': {
-    name: 'guestbook',
-    x: 182,
-    y: 104,
-    w: '100px',
-  },
+  // '/guestbook': {
+  //   name: 'guestbook',
+  //   x: 182,
+  //   y: 104,
+  //   w: '100px',
+  // },
 };
 
 function Logo() {
   return (
-    <Link aria-label="Lee Robinson" href="/">
-      <motion.svg
+    <Link aria-label="Kyle Godbey" href="/">
+    <svg viewBox="0 0 500 500" width="70" height="70" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 107.205 289.072 L 130.605 289.072 L 130.605 263.422 L 141.255 249.022 L 164.355 289.072 L 189.855 289.072 L 154.905 230.572 L 184.305 191.422 L 158.805 191.422 L 131.055 230.122 L 130.605 230.122 L 130.605 191.422 L 107.205 191.422 Z M 238.148 290.872 C 251.948 290.872 263.948 285.622 270.698 279.022 L 270.698 233.422 L 234.398 233.422 L 234.398 252.472 L 249.998 252.472 L 249.998 268.222 C 247.898 269.872 244.148 270.772 240.698 270.772 C 222.548 270.772 213.698 259.522 213.698 240.022 C 213.698 221.122 224.198 209.722 238.598 209.722 C 246.848 209.722 251.948 212.122 256.748 216.472 L 269.048 202.372 C 262.298 195.322 252.098 189.622 237.848 189.622 C 211.748 189.622 189.848 208.372 189.848 240.922 C 189.848 273.922 211.148 290.872 238.148 290.872 Z" transform="matrix(2.74336, 0, 0, 2.744734, -269.462585, -409.596527)" fill="rgb(51, 51, 51)" text-transform="capitalize" white-space="pre" class="svg-elem-1"></path>
+      <rect x="18.154" y="19.306" width="462.656" height="58.091" paint-order="stroke" stroke-width="4px" fill="rgb(51, 51, 51)" stroke="rgb(51, 51, 51)" class="svg-elem-2"></rect>
+      <rect x="16.597" y="422.833" width="465.249" height="58.091" paint-order="stroke" stroke-width="4px" fill="rgb(51, 51, 51)" stroke="rgb(51, 51, 51)" class="svg-elem-3"></rect>
+    </svg>
+      {/* <motion.svg
         className="text-black dark:text-white h-[25px] md:h-[37px]"
         width="25"
         height="37"
@@ -72,7 +77,7 @@ function Logo() {
           d="M232 314.998H129.852L232 232.887V314.998Z"
           fill="currentColor"
         />
-      </motion.svg>
+      </motion.svg> */}
     </Link>
   );
 }
@@ -86,7 +91,7 @@ export default function Navbar() {
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
       <div className="lg:sticky lg:top-20">
-        <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
+        <div className="ml-2 md:ml-[1px] mb-2 px-4 md:px-0 md:mb-4 space-y-10 flex flex-col md:flex-row items-start ">
           <Logo />
         </div>
         <nav

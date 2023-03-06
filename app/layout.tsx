@@ -14,20 +14,20 @@ const kaisei = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: 'Kyle Godbey',
+    template: '%s | Kyle Godbey',
   },
-  description: 'Developer, writer, and creator.',
+  description: 'Physicist.',
   openGraph: {
-    title: 'Lee Robinson',
-    description: 'Developer, writer, and creator.',
-    url: 'https://leerob.io',
-    siteName: 'Lee Robinson',
+    title: 'Kyle Godbey',
+    description: 'Physicist.',
+    url: 'https://next.kyle.ee',
+    siteName: 'Kyle Godbey',
     images: [
       {
-        url: 'https://leerob.io/og.jpg',
-        width: 1920,
-        height: 1080,
+        url: 'https://next.kyle.ee/kg.jpg',
+        width: 700,
+        height: 700,
       },
     ],
     locale: 'en-US',
@@ -45,15 +45,15 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Lee Robinson',
+    title: 'Kyle Godbey',
     card: 'summary_large_image',
   },
   icons: {
     shortcut: '/favicon.ico',
   },
   verification: {
-    google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    yandex: '14d2e73487fa6c71',
+    // google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+    // yandex: '14d2e73487fa6c71',
   },
 };
 

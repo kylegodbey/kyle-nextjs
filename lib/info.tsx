@@ -1,22 +1,21 @@
 import me from '../app/avatar.jpg';
 
-export const name = 'Lee Robinson';
+export const name = 'Kyle Godbey';
 export const avatar = me;
+export const githuburl = 'https://github.com/kylegodbey';
+export const scholarurl = 'https://scholar.google.com/citations?user=LOPNXAcAAAAJ&hl=en';
+export const cvurl = "https://github.com/kylegodbey/CV/raw/main/CV/KyleGodbeyCV.pdf"
 export const about = () => {
   return (
     <>
-      Hey, I'm Lee. I'm the <b>VP of Developer Experience at Vercel</b> where my
-      team helps developers build a faster web.
+      I am currently a research assistant professor at the Facility for Rare Isotope Beams exploring nuclear physics through the use of microscopic models. Their main focus is investigating nuclear dynamics and how they play a role in phenomena at scales spanning from the atomic nucleus to neutron stars.
     </>
   );
 };
 export const bio = () => {
   return (
     <>
-      I'm a Next.js contributor and help lead our open-source communities. I'm
-      passionate about frontend development and have created courses on React,
-      Next.js, and web development. I'm an advisor and investor in early stage
-      startups.
+      
     </>
   );
 };

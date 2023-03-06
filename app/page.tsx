@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getBlogViews, getTweetCount, getStarCount } from 'lib/metrics';
+import { getBlogViews } from 'lib/metrics';
 import {
   ArrowIcon,
   GitHubIcon,
   TwitterIcon,
   ViewsIcon,
+  ScholarIcon
 } from 'components/icons';
-import { name, about, bio, avatar } from 'lib/info';
+import { name, about, bio, avatar, githuburl, scholarurl, cvurl } from 'lib/info';
 
 export const revalidate = 60;
 
@@ -15,10 +16,8 @@ export default async function HomePage() {
   let starCount, views, tweetCount;
 
   try {
-    [starCount, views, tweetCount] = await Promise.all([
-      getStarCount(),
+    [views ] = await Promise.all([
       getBlogViews(),
-      getTweetCount(),
     ]);
   } catch (error) {
     console.error(error);
@@ -33,7 +32,7 @@ export default async function HomePage() {
       <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
         <Image
           alt={name}
-          className="rounded-full grayscale"
+          className="rounded-full"
           src={avatar}
           placeholder="blur"
           width={100}
@@ -43,24 +42,24 @@ export default async function HomePage() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href={scholarurl}
             className="flex items-center gap-2"
           >
-            <TwitterIcon />
-            {`${tweetCount.toLocaleString()} tweets all time`}
+            <ScholarIcon />
+            {`Google Scholar`}
           </a>
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/leerob"
+            href={githuburl}
             className="flex items-center gap-2"
           >
             <GitHubIcon />
-            {`${starCount.toLocaleString()} stars on this repo`}
+            {`Github`}
           </a>
-          <Link href="/blog" className="flex items-center">
+          <Link href={cvurl} className="flex items-center">
             <ViewsIcon />
-            {`${views.toLocaleString()} blog views all time`}
+            {`Download CV`}
           </Link>
         </div>
       </div>
@@ -68,15 +67,15 @@ export default async function HomePage() {
         {bio()}
       </p>
       <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
-        <li>
+        {/* <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href={cvurl}
           >
             <ArrowIcon />
-            <p className="h-7">follow me on twitter</p>
+            <p className="h-7">download cv</p>
           </a>
         </li>
         <li>
@@ -89,7 +88,7 @@ export default async function HomePage() {
             <ArrowIcon />
             <p className="h-7">get email updates</p>
           </a>
-        </li>
+        </li> */}
       </ul>
     </section>
   );
