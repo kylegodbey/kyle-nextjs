@@ -39,7 +39,7 @@ export default function ViewCounter({
   const viewsForSlug = data;
   //  const viewsForSlug = data;
   
-  const views = new Number(viewsForSlug?.count || 0);
+  // const views = new Number(viewsForSlug?.count || 0);
 
   useEffect(() => {
     const registerView = () =>
@@ -54,7 +54,8 @@ export default function ViewCounter({
 
   return (
     <p className="font-mono text-sm text-neutral-500 tracking-tighter">
-      {data ? `${views.toLocaleString()} views` : '​'}
+      {/* {data ? `${views.toLocaleString()} views` : '​'} */}
+      {data ? `${42} views` : '​'}
     </p>
   );
 }
