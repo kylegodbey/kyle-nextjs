@@ -23,8 +23,22 @@ export default function ViewCounter({
   slug: string;
   trackView: boolean;
 }) {
-  const { data } = useSWR<PostView[]>('/api/views', fetcher);
-  const viewsForSlug = data && data.find((view) => view.slug === slug);
+  // const { data } = useSWR<PostView[]>('/api/views', fetcher);
+  const { data, error } = useSWR('/api/views', fetcher);
+  if (error) return ( 
+    <div>failed to load</div>
+  )
+  if (!data) return (
+    <div>loading...</div>
+  )
+  if (!Array.isArray(data)) return (
+    <div>no view data!</div>
+  )
+  // return <div>hello {data.name}!</div>
+  //if (Array.isArray(data)) const viewsForSlug = data && data.find((view) => view.slug === slug);
+  const viewsForSlug = data;
+  //  const viewsForSlug = data;
+  
   const views = new Number(viewsForSlug?.count || 0);
 
   useEffect(() => {
