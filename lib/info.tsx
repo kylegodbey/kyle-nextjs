@@ -8,7 +8,7 @@ export const cvurl = "https://github.com/kylegodbey/CV/raw/main/CV/KyleGodbeyCV.
 export const about = () => {
   return (
     <>
-      I am currently a research assistant professor at the Facility for Rare Isotope Beams exploring nuclear physics through the use of microscopic models. Their main focus is investigating nuclear dynamics and how they play a role in phenomena at scales spanning from the atomic nucleus to neutron stars.
+      I am currently a research assistant professor at the Facility for Rare Isotope Beams exploring nuclear physics through the use of microscopic models. My main focus is investigating nuclear dynamics and how they play a role in phenomena at scales spanning from the atomic nucleus to neutron stars.
     </>
   );
 };
